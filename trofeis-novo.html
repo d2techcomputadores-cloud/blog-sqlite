@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Trofeu</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+</head>
+<body>
+    <header>
+        <h1>Blog TI 26</h1>            
+        <nav>
+            <a href="header.html">Home</a>
+            <a href="trofeis.php">Trofeis</a>
+            <a href="trofeis-novo.html">Novo Trofeu</a>
+        </nav>
+    </header>
+    <h2 style="text-align: center;">Novo Trofeu</h2>
+    <form action="trofeis-novo.php" method="post">
+        
+        <label>Nome:</label>
+        <input style="width: 100%;" name="trofeu_nome">
+
+        <label>quantidade:</label>
+        <input style="width: 100%;" name="trofeu_quantiade"></input> 
+
+        <label>ano:</label>
+        <input style="width: 100%;" name="trofeu_ano">
+
+        <label>Img:</label>
+        <input style="width: 100%;" name="trofeu_img"> 
+
+        <input style="width: 100%;" type="submit" value = "Criar linha">
+    </form>
+</body>
+</html>

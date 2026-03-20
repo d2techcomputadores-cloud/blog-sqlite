@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Jogador</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+</head>
+<body>
+    <header>
+        <h1>Blog TI 26</h1>            
+        <nav>
+            <a href="header.html">Home</a>
+            <a href="jogador.php">Jogadores</a>
+            <a href="novo-jogador.html">Novo Jogador</a>
+        </nav>
+    </header>
+    <h2 style="text-align: center;">Novo Jogador</h2>
+    <form action="novo-jogador.php" method="post">
+        
+        <label>Nome:</label>
+        <input style="width: 100%;" name="jogador_nome">
+
+        <label>Posição:</label>
+        <input style="width: 100%;" name="jogador_posicao"> 
+
+        <label>Idade:</label>
+        <input style="width: 100%;" name="jogador_idade">
+
+        <label>Camisa:</label>
+        <input style="width: 100%;" name="jogador_camisa">
+
+        <label>Nacionalidade:</label>
+        <input style="width: 100%;" name="jogador_nacionalidade">
+
+        <label>Img:</label>
+        <input style="width: 100%;" name="jogador_img"> 
+
+        <input style="width: 100%;" type="submit" value = "Criar linha">
+    </form>
+</body>
+</html>
