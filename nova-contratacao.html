@@ -8,13 +8,20 @@
 </head>
 <body>
     <header>
-        <h1>Blog TI 26</h1>            
+
+        <div>
+            <img style="width: 200px;" src="img/gremio logo.svg">
+        </div>
+                   
         <nav>
-            <a href="header.html">Home</a>
+            <a href="header.php">Home</a>
+            <a href="contratacoes.php">Contratações</a>
+            <a href="nova-contratacao.html">Nova Contratação</a>
+            <a href="deletar-contratacao.php">Deletar Contratação</a>
         </nav>
     </header>
     <h2 style="text-align: center;">Novo Contratação</h2>
-    <form action="nova-contratacao.php" method="contratacao">
+    <form action="nova-contratacao.php"  method="post">
 
         <label>Nome:</label>
         <input style="width: 100%;" name="contratacao_nome">
@@ -29,7 +36,7 @@
         <input style="width: 100%;" name="contratacao_idade">
 
         <label>Nacionalidade:</label>
-        <input style="width: 100%;" name="contratacao_nacio">
+        <input style="width: 100%;" name="contratacao_nacionalidade">
 
         <label>Valor:</label>
         <input style="width: 100%;" name="contratacao_valor">

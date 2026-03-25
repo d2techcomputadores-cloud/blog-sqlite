@@ -37,16 +37,16 @@ values('Grêmio x Bragantino',
         '09/02/26',
         '/img/icones/chat.svg');
 
-drop table trofeis;
-create table trofeis(
+drop table trofeus;
+create table trofeus(
     trofeuId integer not null primary key,
     nome text,
     quantidade integer,
-    ano integer,
+    ultimo integer,
     img text
 );
 
-insert into trofeis (nome, quantidade, ano, img)
+insert into trofeus (nome, quantidade, ultimo, img)
 values('Libertadores', 3, 2017, 'sla');
 
 

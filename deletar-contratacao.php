@@ -1,0 +1,82 @@
+<?php
+
+require("conectar_com_banco.php");
+
+$sql_dados_contratacoes = "
+SELECT contratacaoId, nome, posicao, time, idade, nacionalidade, valor
+FROM contratacoes
+ORDER BY contratacaoId DESC;
+";
+
+$rs_contratacoes = $conn->query($sql_dados_contratacoes);
+
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img style="width: 200px;" src="img/gremio logo.svg">
+        </div>
+
+    <nav>
+        <a href="header.php">Home</a>
+        <a href="contratacoes.php">Contratações</a>
+        <a href="nova-contratacao.html">Nova Contratação</a>
+        <a href="deletar-contratacao.php">Deletar Contratação</a>
+    </nav>
+    
+    </header>
+    <h2 style="text-align: center;">Deletar Contratação</h2>
+    <table>
+        <thead>
+            <th style="text-align: center;">Nome</th>
+            <th style="text-align: center;">Posição</th>
+            <th style="text-align: center;">Time</th>
+            <th style="text-align: center;">Idade</th>
+            <th style="text-align: center;">Nacionalidade</th>
+            <th style="text-align: center;">Valor</th>
+            <th style="text-align: center;">Comando</th>
+        </thead>
+
+        <tbody>
+
+            <?php
+            
+            while($uma_contratacao = $rs_contratacoes->fetch(PDO::FETCH_ASSOC)) {
+                $nome = $uma_contratacao['nome'];
+                $posicao = $uma_contratacao['posicao'];
+                $time = $uma_contratacao['time'];
+                $idade = $uma_contratacao['idade'];
+                $nacionalidade = $uma_contratacao['nacionalidade'];
+                $valor = $uma_contratacao['valor'];
+                $id = $uma_contratacao['contratacaoId'];
+
+                $linha_com_contratacao = "
+                <tr>
+                    <td style='text-align: center;'>$nome</td>
+                    <td style='text-align: center;'>$posicao</td>
+                    <td style='text-align: center;'>$time</td>
+                    <td style='text-align: center;'>$idade</td>
+                    <td style='text-align: center;'>$nacionalidade</td>
+                    <td style='text-align: center;'>$valor</td>
+                    <td style='text-align: center;'>
+                        <a style='color: white; background-color: red; border-radius: 8px; padding: 6px;'
+                        href='ctrl-apagar-contratacao.php?id=$id'>Deletar</a>
+                    </td>
+                </tr>
+                ";
+
+                echo $linha_com_contratacao;
+            }
+
+            ?>
+        <tbody>
+    </table>
+</body>
+</html>

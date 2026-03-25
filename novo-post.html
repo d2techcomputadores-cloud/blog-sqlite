@@ -8,11 +8,14 @@
 </head>
 <body>
     <header>
-        <h1>Blog TI 26</h1>            
+        <div>
+            <img style="width: 200px;" src="img/gremio logo.svg">
+        </div>
         <nav>
-            <a href="header.html">Home</a>
-            <a href="index.php">posts</a>
+            <a href="header.php">Home</a>
+            <a href="index.php">Posts</a>
             <a href="novo-post.html">Novo Post</a>
+            <a href="deletar-post.php">Deletar Post</a>
 
         </nav>
     </header>
@@ -20,19 +23,19 @@
     <form action="novo-post.php" method="post">
         
         <label>Título:</label>
-        <input style="width: 100%;" name="posts_titulo">
+        <input style="width: 100%;" name="post_titulo">
 
         <label>Texto:</label>
-        <textarea name="posts_texto"></textarea>
+        <textarea name="post_texto"></textarea>
 
         <label>Autor:</label>
-        <input style="width: 100%;" name="posts_autor">
+        <input style="width: 100%;" name="post_autor">
 
         <label>Data:</label>
-        <input style="width: 100%;" name="posts_data">
+        <input style="width: 100%;" name="post_data">
 
         <label>Img:</label>
-        <input style="width: 100%;" name="posts_img">
+        <input style="width: 100%;" name="post_img">
 
         <input style="width: 100%;" type="submit" value = "Criar linha">
     </form>
