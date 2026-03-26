@@ -73,8 +73,7 @@ $rs_contratacoes = $conn->query($sql_dados_contratacoes);
                 ";
 
                 echo $linha_com_contratacao;
-            }
-
+            };
             ?>
         <tbody>
     </table>

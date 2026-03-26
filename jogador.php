@@ -7,14 +7,15 @@ require "model-jogador.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
     
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+    
 
    
-    <title>JOGADORES</title>
+    <title>Jogadores</title>
 </head>
 <body>
 
@@ -33,11 +34,11 @@ require "model-jogador.php";
     </header>
 
     <main class="container">
-        <h2 style="text-align: center;">Jogadores</h2>
+        <h1 style="text-align: center;">Jogadores</h1>
 
     <?php
         // Lemos todas as linhas (uma por vez) do result set
-        while ($dados_jogadores = $result_set_jogadores->fetch(PDO::FETCH_ASSOC)) {
+        while ($dados_jogadores = $rs_jogadores->fetch(PDO::FETCH_ASSOC)) {
 
             // Pegamos os dados da linha e guardamos em variáveis...
             $jogador_nome = $dados_jogadores["nome"];
@@ -51,7 +52,7 @@ require "model-jogador.php";
             //...usamos as variáveis para preencher o template
             $template_jogador = "
             <div  style='text-align: center;'  class='container'>
-                <div style='width: 450px; height: 550;' class='card mb-4 rounded-3 shadow-sm'>
+                <div style='width: 100%; height: 550;' class='card mb-4 rounded-3 shadow-sm'>
                     <div class='card-header py-3'>
                     <img src='<?= $jogador_img?>'> 
                     </div>
@@ -60,9 +61,9 @@ require "model-jogador.php";
                             <small class='text-body-secondary fw-light'>/ $jogador_posicao</small>
                         </h1>
                         <ul class='list-unstyled mt-3 mb-4'>
-                            <h6>Idade: $jogador_idade</h6>
-                            <h6>Camisa n°: $jogador_camisa</h6>
-                            <h6>Nacionalidade: $jogador_nacionalidade</h6>
+                            <h6 style='color: gray;'>Idade: $jogador_idade</h6>
+                            <h6 style='color: gray;'>Camisa n°: $jogador_camisa</h6>
+                            <h6 style='color: gray;'>Nacionalidade: $jogador_nacionalidade</h6>
                         </ul> 
                     </div>           
                 </div>

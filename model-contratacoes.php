@@ -8,6 +8,5 @@ FROM contratacoes
 ORDER BY contratacaoId DESC;
 ";
 
-$result_set_contratacoes = $conn->query($sql_dados_contratacoes);
-
+$rs_contratacoes = $conn->query($sql_dados_contratacoes);
 ?>

@@ -1,5 +1,5 @@
 <?php
-require "trofeus-model.php";
+require "model-trofeu.php";
 ?>
 
 <!DOCTYPE html>
@@ -8,12 +8,10 @@ require "trofeus-model.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Troféus</title>
-    
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
 
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 </head>
 <body style="text-align: center;">
@@ -30,8 +28,8 @@ integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJ
             <a href="deletar-trofeu.php">Deletar Troféu</a>
         </nav>
     </header>
-    <main style="text-align: center; align-items: center;">
-        <h2 style="text-align: center;">Troféus</h2>
+    <main style="text-align: center;">
+        <h1 style="text-align: center;">Troféus</h1>
                 
                 <?php
 
@@ -44,17 +42,17 @@ integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJ
 
                     $template_de_trofeu = "
                         <div  style='text-align: center;' class='container'>
-                            <div style='width: 450px; height: 550; alight-items: center;' class='card mb-4 rounded-3 shadow-sm'>
+                            <div style='width: 100%; height: 550; alight-items: center;' class='card mb-4 rounded-3 shadow-sm'>
                                 <div class='card-header py-3'>
                                 <img src=' $trofeu_img'> 
                                 </div>
                                 <div id='card-body' class='card-body'>
-                                    <h1 class='card-title pricing-card-title'>$trofeu_nome
+                                    <h1 style='' class='card-title pricing-card-title'>$trofeu_nome
                                         <small class='text-body-secondary fw-light'></small>
                                     </h1>
                                     <ul class='list-unstyled mt-3 mb-4'>
-                                        <h4>Quantidade: $trofeu_quantidade</h4>
-                                        <h4>Ultima vez conquistado: $trofeu_ultimo</h4>
+                                        <h4 style='color: gray;'>Quantidade: $trofeu_quantidade</h4>
+                                        <h4 style='color: gray;'>Ultima vez conquistado: $trofeu_ultimo</h4>
                                     </ul> 
                                 </div>
                             </div>

@@ -1,5 +1,5 @@
 <?php
-require "index_model.php";
+require "model-post.php";
 ?>
 
 <!DOCTYPE html>
@@ -7,44 +7,27 @@ require "index_model.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?=$blog_nome?></title>
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-
 <body>
-    <header>
-    <div>
-            <img style="width: 200px;" src="img/gremio logo.svg">
-        </div>
-        <nav>
-            <a href="header.php">Home</a>
-            <a href="index.php">Posts</a>
-            <a href="novo-post.html">Novo Post</a>
-            <a href="deletar-post.php">Deletar Post</a>
-        </nav>
-    </header>
-
     <main>
         <section>
-            <h2 style="text-align: center;">Posts</h2>
         <?php
 
-        while ($dados_posts = $result_set_posts->fetch(PDO::FETCH_ASSOC)) {
+        while ($dados_posts = $rs_posts->fetch(PDO::FETCH_ASSOC)) {
 
             $posts_titulo = $dados_posts["titulo"];
             $posts_texto = $dados_posts["texto"];
             $posts_autor = $dados_posts["autor"];
             $posts_data = $dados_posts["data"];
             $posts_img = $dados_posts["img"];
-            
 
             $template_de_post = "
-            <div class='col-md-12'>
+            <div style='padding-left: 50px' class='col-md-12'>
                 <div class='row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative'>
                     <div class='col p-4 d-flex flex-column position-static'> <strong
-                    class='d-inline-block mb-2 text-primary-emphasis'>Autor: $posts_autor</strong>
+                    style='color: navy;' class='d-inline-block mb-2 text-primary-emphasis'>Autor: $posts_autor</strong>
                         <h3 class='mb-0'>$posts_titulo</h3>
                         <div class='mb-1 text-body-secondary'>$posts_data</div>
                         <p class='card-text mb-auto'>$posts_texto</p> 
@@ -61,8 +44,7 @@ require "index_model.php";
             ";
 
             echo $template_de_post;
-        }
-
+        };
         ?>
             
         </section>
@@ -70,7 +52,3 @@ require "index_model.php";
     </main>
 </body>
 </html>
-
-
-
-

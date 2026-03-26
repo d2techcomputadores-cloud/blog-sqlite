@@ -9,8 +9,8 @@ ORDER BY trofeuId DESC;
 ";
 
 $rs_trofeus = $conn->query($sql_dados_trofeus);
-
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -23,7 +23,6 @@ $rs_trofeus = $conn->query($sql_dados_trofeus);
         <div>
             <img style="width: 200px;" src="img/gremio logo.svg">
         </div>
-        
 
     <nav>
         <a href="header.php">Home</a>
@@ -63,7 +62,7 @@ $rs_trofeus = $conn->query($sql_dados_trofeus);
                 ";
 
                 echo $linha_com_trofeu;
-            }
+            };
 
             ?>
         <tbody>

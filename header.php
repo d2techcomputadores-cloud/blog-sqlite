@@ -9,12 +9,16 @@
     
 
 
-    <title>Document</title>
+    <title>BlogDoGrêmio</title>
 </head>
 <body>
     <header class="border-bottom lh-1 py-3">
         <div class="row">
-            <div class="col-4 pt-1"> <a class="link-secondary" href="#"><img width="220px" src="../img/gremio logo.svg">Inscrever-se</a> </div>
+            <div class="col-4 pt-1">
+                <a class="link-secondary" href="#">
+                    <img width="220px" src="../img/gremio logo.svg">Inscrever-se
+                </a> 
+            </div>
     
             <div  class="col-4 text-center"> 
                 <a class="blog-header-logo text-body-emphasis text-decoration-none"
@@ -41,28 +45,44 @@
     <div>
         <nav class="nav nav-underline justify-content-between"> 
             <a style="color: white;" class="nav-item nav-link link-body-emphasis active" href="#">Tudo </a> 
-            <a style="color: white;" class="nav-item nav-link link-body-emphasis" href="index.php">Posts</a> 
-            <a style="color: white;" class="nav-item nav-link link-body-emphasis" href="jogador.php">Jogadores</a> 
-            <a style="color: white;" class="nav-item nav-link link-body-emphasis" href="contratacoes.php">Contratações</a> 
-            <a style="color: white;" class="nav-item nav-link link-body-emphasis" href="trofeus.php">Troféus</a> 
+            <a style="color: white;" class="nav-item nav-link link-body-emphasis" href="../posts.php">Posts</a> 
+            <a style="color: white;" class="nav-item nav-link link-body-emphasis" href="../jogador.php">Jogadores</a> 
+            <a style="color: white;" class="nav-item nav-link link-body-emphasis" href="../contratacoes.php">Contratações</a> 
+            <a style="color: white;" class="nav-item nav-link link-body-emphasis" href="../trofeus.php">Troféus</a> 
             <hr>
         </nav>
     </div>
     <hr>
-    <img style="width: 100%;" src="gif/gif-2000x380.gif">
+    <img style="width: 100%; padding: 10px 0;" src="gif/gif-2000x380.gif">
     <main>
 
+    <div class="row">
+        <div class="col-10">
+
+            <?php
+            require("post.php");
+            ?>
+
+        </div>
+
+        <div style="text-align: center;" class="col">
+
+            <?php
+            require("require/anuncio.html")
+            ?>
+
+        </div>
+
+    </div>
+        
+
         <?php
-        require("post.html");
+        require("require/card-socio.html");
         ?>
 
-        <?php
-        require("card-socio.html");
-        ?>
-
 
         <?php
-        require("footer.html");
+        require("require/footer.html");
         ?>
         
     </main>

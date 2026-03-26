@@ -26,5 +26,5 @@ $id = $conn->lastInsertId();
 ?>
 
 <?php
-require "index.php";
+require "posts.php";
 ?>

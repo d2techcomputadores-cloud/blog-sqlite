@@ -8,6 +8,5 @@ FROM jogadores
 ORDER BY jogadorId DESC;
 ";
 
-$result_set_jogadores = $conn->query($sql_dados_jogadores);
-
+$rs_jogadores = $conn->query($sql_dados_jogadores);
 ?>
