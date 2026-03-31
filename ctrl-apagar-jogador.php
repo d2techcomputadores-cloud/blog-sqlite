@@ -14,5 +14,5 @@ $stmt->bindValue(':id_jogador', $id_jogador);
 
 $stmt->execute(); 
 
-require "deletar-jogador.php";
+require "gerenciar-jogador.php";
 ?>

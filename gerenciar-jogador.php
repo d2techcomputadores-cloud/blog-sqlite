@@ -28,7 +28,7 @@ $rs_jogadores = $conn->query($sql_dados_jogadores);
         <a href="header.php">Home</a>
         <a href="jogador.php">Jogadores</a>
         <a href="novo-jogador.html">Novo Jogador</a>
-        <a href="deletar-jogador.php">Deletar Jogador</a>
+        <a href="gerenciar-jogador.php">Gerenciar Jogador</a>
     </nav>
     
     </header>
@@ -63,8 +63,11 @@ $rs_jogadores = $conn->query($sql_dados_jogadores);
                     <td style='text-align: center;'>$camisa</td>
                     <td style='text-align: center;'>$nacionalidade</td>
                     <td style='text-align: center;'>
-                        <a style='color: white; background-color: red; border-radius: 8px; padding: 6px;'
+                        <a style='color: black; background-color: red; border-radius: 8px; padding: 8px; font-family: Arial, Helvetica, sans-serif;'  
                         href='ctrl-apagar-jogador.php?id=$id'>Deletar</a>
+                        
+                        <a style='color: black; background-color: orange; border-radius: 8px; padding: 8px; padding-left: 10px; font-family: Arial, Helvetica, sans-serif;'  
+                        href='editar-jogador.php?id=$id'>Editar</a>
                     </td>
                 </tr>
                 ";

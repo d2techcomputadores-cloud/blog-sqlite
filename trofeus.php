@@ -25,7 +25,7 @@ require "model-trofeu.php";
             <a href="header.php">Home</a>
             <a href="trofeus.php">Troféus</a>
             <a href="novo-trofeu.html">Novo Troféu</a>
-            <a href="deletar-trofeu.php">Deletar Troféu</a>
+            <a href="gerenciar-trofeu.php">Gerenciar Troféus</a>
         </nav>
     </header>
     <main style="text-align: center;">
@@ -44,7 +44,7 @@ require "model-trofeu.php";
                         <div  style='text-align: center;' class='container'>
                             <div style='width: 100%; height: 550; alight-items: center;' class='card mb-4 rounded-3 shadow-sm'>
                                 <div class='card-header py-3'>
-                                <img src=' $trofeu_img'> 
+                                <img src='img/taças/$trofeu_img.jpg'> 
                                 </div>
                                 <div id='card-body' class='card-body'>
                                     <h1 style='' class='card-title pricing-card-title'>$trofeu_nome

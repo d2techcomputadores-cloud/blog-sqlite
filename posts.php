@@ -21,7 +21,7 @@ require "model-post.php";
             <a href="header.php">Home</a>
             <a href="posts.php">Posts</a>
             <a href="novo-post.html">Novo Post</a>
-            <a href="deletar-post.php">Deletar Post</a>
+            <a href="gerenciar-post.php">Gerenciar Posts</a>
         </nav>
     </header>
 
@@ -51,7 +51,7 @@ require "model-post.php";
                         </a>
                     </div>
                     <div class='col-auto d-none d-lg-block'> 
-                        <img style='width: 180px;' src='$posts_img'>    
+                        <img style='width: 180px;' src='img/icones/$posts_img.svg'>    
                     </div>
                 </div>
             </div>

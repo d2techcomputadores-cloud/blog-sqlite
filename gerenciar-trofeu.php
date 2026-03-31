@@ -28,7 +28,7 @@ $rs_trofeus = $conn->query($sql_dados_trofeus);
         <a href="header.php">Home</a>
         <a href="trofeus.php">Troféus</a>
         <a href="novo-trofeu.html">Novo Troféu</a>
-        <a href="deletar-post.php">Deletar Troféu</a>
+        <a href="gerenciar-trofeu.php">Gerenciar Troféu</a>
     </nav>
     
     </header>
@@ -56,8 +56,11 @@ $rs_trofeus = $conn->query($sql_dados_trofeus);
                     <td <td style='text-align: center;'>$quantidade</td>
                     <td <td style='text-align: center;'>$ultimo</td>
                     <td style='text-align: center;'>
-                        <a style='color: white; background-color: red; border-radius: 8px; padding: 6px;'  
-                        href='ctrl-apagar-trofeu.php?id=$id'>Deletar</a></td>
+                        <a style='color: black; background-color: red; border-radius: 8px; padding: 8px; font-family: Arial, Helvetica, sans-serif;'  
+                        href='ctrl-apagar-trofeu.php?id=$id'>Deletar</a>
+                        
+                        <a style='color: black; background-color: orange; border-radius: 8px; padding: 8px; padding-left: 10px; font-family: Arial, Helvetica, sans-serif;'  
+                        href='editar-trofeu.php?id=$id'>Editar</a>
                 </tr>
                 ";
 

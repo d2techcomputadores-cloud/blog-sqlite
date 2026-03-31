@@ -14,5 +14,5 @@ $stmt->bindValue(':id_post', $id_post);
 
 $stmt->execute(); 
 
-require "deletar-post.php";
+require "gerenciar-post.php";
 ?>

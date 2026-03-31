@@ -11,9 +11,6 @@ require "model-jogador.php";
     
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-    
-
    
     <title>Jogadores</title>
 </head>
@@ -28,9 +25,8 @@ require "model-jogador.php";
             <a href="header.php">Home</a>
             <a href="jogador.php">Jogadores</a>
             <a href="novo-jogador.html">Novo Jogador</a>
-            <a href="deletar-jogador.php">Deletar Jogador</a>
+            <a href="gerenciar-jogador.php">Gerenciar Jogador</a>
         </nav>   
-   
     </header>
 
     <main class="container">
@@ -47,14 +43,13 @@ require "model-jogador.php";
             $jogador_camisa = $dados_jogadores["camisa"];
             $jogador_nacionalidade = $dados_jogadores["nacionalidade"];
             $jogador_img = $dados_jogadores["img"];
-            
 
             //...usamos as variáveis para preencher o template
             $template_jogador = "
-            <div  style='text-align: center;'  class='container'>
-                <div style='width: 100%; height: 550;' class='card mb-4 rounded-3 shadow-sm'>
-                    <div class='card-header py-3'>
-                    <img src='<?= $jogador_img?>'> 
+            <div  style='text-align: center;'  class=''>
+                <div style='width: 100;' class='card mb-4 rounded-3 shadow-sm'>
+                    <div class='card-header'>
+                    <img style='width: 80%;' src='img/jogadores/$jogador_img.jpg'> 
                     </div>
                     <div id='card-body' class='card-body'>
                         <h1 class='card-title pricing-card-title'> $jogador_nome
@@ -72,7 +67,7 @@ require "model-jogador.php";
 
             //Escrevemos o HTML resultante (template + dados)
             echo $template_jogador;
-        }
+        };
 
         ?>
         

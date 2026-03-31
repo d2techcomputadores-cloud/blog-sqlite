@@ -14,5 +14,5 @@ $stmt->bindValue(':id_trofeu', $id_trofeu);
 
 $stmt->execute(); 
 
-require "deletar-trofeu.php";
+require "gerenciar-trofeu.php";
 ?>

@@ -25,8 +25,8 @@ require "model-contratacoes.php";
             <a href="header.php">Home</a>
             <a href="contratacoes.php">Contratações</a>
             <a href="nova-contratacao.html">Novo Contratação</a>
-            <a href="deletar-contratacao.php">Deletar Contratação</a>
-        </nav>   
+            <a href="gerenciar-contratacao.php">Gerenciar Contratações</a>
+            </nav>   
    
     </header>
 
@@ -48,7 +48,7 @@ require "model-contratacoes.php";
             <div  style='text-align: center;'  class='container'>
                 <div style='width: 100%; height: 550;' class='card mb-4 rounded-3 shadow-sm'>
                     <div class='card-header py-3'>
-                    <img src='<?= $contratacao_img?>'> 
+                    <img src='img/contratacoes/$contratacao_img.jpg'> 
                     </div>
                     <div id='card-body' class='card-body'>
                         <h1 class='card-title pricing-card-title'> $contratacao_nome
@@ -58,7 +58,7 @@ require "model-contratacoes.php";
                             <h6 style='color: gray;'>Ex Time: $contratacao_time</h6>
                             <h6 style='color: gray;'>Idade: $contratacao_idade</h6>
                             <h6 style='color: gray;'>Nacionalidade: $contratacao_nacionalidade</h6>
-                            <h6 style='color: gray;'>Valor: $contratacao_valor</h6>
+                            <h6 style='color: gray;'>Valor Pago: R$$contratacao_valor Milhões</h6>
                         </ul> 
                     </div>           
                 </div>

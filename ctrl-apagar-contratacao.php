@@ -14,5 +14,5 @@ $stmt->bindValue(':id_contratacao', $id_contratacao);
 
 $stmt->execute(); 
 
-require "deletar-contratacao.php";
+require "gerenciar-contratacao.php";
 ?>

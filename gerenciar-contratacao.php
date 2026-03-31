@@ -16,6 +16,7 @@ $rs_contratacoes = $conn->query($sql_dados_contratacoes);
 
 <head>
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+    
 </head>
 
 <body>
@@ -28,11 +29,11 @@ $rs_contratacoes = $conn->query($sql_dados_contratacoes);
         <a href="header.php">Home</a>
         <a href="contratacoes.php">Contratações</a>
         <a href="nova-contratacao.html">Nova Contratação</a>
-        <a href="deletar-contratacao.php">Deletar Contratação</a>
+        <a href="gerenciar-contratacao.php">Gerenciar Contratações</a>
     </nav>
     
     </header>
-    <h2 style="text-align: center;">Deletar Contratação</h2>
+    <h2 style="text-align: center;">Gerenciar Contratação</h2>
     <table>
         <thead>
             <th style="text-align: center;">Nome</th>
@@ -66,8 +67,11 @@ $rs_contratacoes = $conn->query($sql_dados_contratacoes);
                     <td style='text-align: center;'>$nacionalidade</td>
                     <td style='text-align: center;'>$valor</td>
                     <td style='text-align: center;'>
-                        <a style='color: white; background-color: red; border-radius: 8px; padding: 6px;'
+                        <a style='color: black; background-color: red; border-radius: 8px; padding: 8px; font-family: Arial, Helvetica, sans-serif;'  
                         href='ctrl-apagar-contratacao.php?id=$id'>Deletar</a>
+                        
+                        <a style='color: black; background-color: orange; border-radius: 8px; padding: 8px; padding-left: 10px; font-family: Arial, Helvetica, sans-serif;'  
+                        href='editar-contratacao.php?id=$id'>Editar</a>
                     </td>
                 </tr>
                 ";

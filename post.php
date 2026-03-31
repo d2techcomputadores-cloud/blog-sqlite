@@ -36,7 +36,7 @@ require "model-post.php";
                         </a>
                     </div>
                     <div class='col-auto d-none d-lg-block'> 
-                        <img style='width: 180px;' src='$posts_img'>    
+                        <img style='width: 180px;' src='img/icones/$posts_img.svg'>    
                     </div>
                 </div>
             </div>
