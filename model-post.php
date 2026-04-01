@@ -3,7 +3,7 @@
 require("conectar_com_banco.php");
 
 $sql_dados_posts = "
-SELECT titulo, texto, data, autor, img
+SELECT postId, titulo, resumo, texto, data, autor, img
 FROM posts
 ORDER BY postId DESC;
 ";

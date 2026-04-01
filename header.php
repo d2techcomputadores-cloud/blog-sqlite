@@ -54,7 +54,7 @@
         <div class="col-10">
 
             <?php
-            require("post.php");
+            require("require/post.php");
             ?>
 
         </div>

@@ -33,6 +33,7 @@ require "model-post.php";
         while ($dados_posts = $rs_posts->fetch(PDO::FETCH_ASSOC)) {
 
             $posts_titulo = $dados_posts["titulo"];
+            $posts_resumo = $dados_posts["resumo"];
             $posts_texto = $dados_posts["texto"];
             $posts_autor = $dados_posts["autor"];
             $posts_data = $dados_posts["data"];
@@ -45,7 +46,7 @@ require "model-post.php";
                     style='color: navy;' class='d-inline-block mb-2'>Autor: $posts_autor</strong>
                         <h3 class='mb-0'>$posts_titulo</h3>
                         <div class='mb-1 text-body-secondary'>$posts_data</div>
-                        <p class='card-text mb-auto'>$posts_texto</p> 
+                        <p class='card-text mb-auto'>$posts_resumo</p> 
                         <a href='#' class='icon-link gap-1 icon-link-hover stretched-link'>
                         Ler mais
                         </a>

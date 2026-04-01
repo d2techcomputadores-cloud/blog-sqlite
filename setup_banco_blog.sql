@@ -17,25 +17,20 @@ drop table posts;
 create table posts(
     postId integer not null primary key,
     titulo text,
+    resumo text,
     texto text,
     data text,
-    autor,
+    autor text,
     img text
 );
 
-insert into posts (titulo, texto, autor, data, img)
-values('Campeão Gaúcho',
-        'Grêmio empata com Internacional no Beira-Rio mas se consagra campeão pelo placar agregado',
-        'Douglas',
-        '16/03/26',
-        '/img/icones/taça.svg');
-
-insert into posts (titulo, texto, autor, data, img)
+insert into posts (titulo, resumo, texto, autor, data, img)
 values('Grêmio x Bragantino',
-        'Grêmio empata com Bragantino pelo brasileirão por 1x1', 
+        'Gremio empata com Bragantino em 1x1',
+        'Grêmio Grêmio Grêmio Grêmio Grêmio Grêmio Grêmio Grêmio Grêmio Grêmio Grêmio Grêmio Grêmio Grêmio v', 
         'Douglas',
         '09/02/26',
-        '/img/icones/chat.svg');
+        'campo');
 
 drop table trofeus;
 create table trofeus(
@@ -49,7 +44,6 @@ create table trofeus(
 insert into trofeus (nome, quantidade, ultimo, img)
 values('Libertadores', 3, 2017, 'sla');
 
-
 drop table jogadores;
 create table jogadores(
     jogadorId integer not null primary key,
@@ -60,7 +54,6 @@ create table jogadores(
     nacionalidade text,
     img text
 );
-
 
 drop table contratacoes;
 create table contratacoes(

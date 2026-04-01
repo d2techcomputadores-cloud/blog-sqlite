@@ -38,10 +38,8 @@ $rs_contratacoes = $conn->query($sql_dados_contratacoes);
         <thead>
             <th style="text-align: center;">Nome</th>
             <th style="text-align: center;">Posição</th>
-            <th style="text-align: center;">Time</th>
             <th style="text-align: center;">Idade</th>
             <th style="text-align: center;">Nacionalidade</th>
-            <th style="text-align: center;">Valor</th>
             <th style="text-align: center;">Comando</th>
         </thead>
 

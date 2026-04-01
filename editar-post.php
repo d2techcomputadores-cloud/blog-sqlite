@@ -4,7 +4,7 @@ $id_post = $_GET['id'];
 require("conectar_com_banco.php");
 
 $sql_dados_posts = "
-SELECT postId, titulo, texto, data, autor,img
+SELECT postId, titulo, resumo, texto, data, autor,img
 FROM posts
 WHERE postId = $id_post;
 ";
@@ -14,6 +14,7 @@ $rs_posts = $conn->query($sql_dados_posts);
 $um_post = $rs_posts->fetch(PDO::FETCH_ASSOC);
 
 $titulo = $um_post['titulo'];
+$resumo = $um_post['resumo'];
 $texto = $um_post['texto'];
 $data = $um_post['data'];
 $autor = $um_post['autor'];
@@ -51,6 +52,9 @@ $img = $um_post['img'];
         <label>Título:</label>
         <input style="width: 100%;" name="posts_titulo" value="<?=$titulo?>">
         
+        <label>Resumo:</label>
+        <textarea name="posts_resumo"><?=$resumo?></textarea>
+
         <label>Texto:</label>
         <textarea name="posts_texto"><?=$texto?></textarea>
 
