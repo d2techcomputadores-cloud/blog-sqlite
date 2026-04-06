@@ -58,7 +58,7 @@ require "model-contratacoes.php";
                             <h6 style='color: gray;'>Ex Time: $contratacao_time</h6>
                             <h6 style='color: gray;'>Idade: $contratacao_idade</h6>
                             <h6 style='color: gray;'>Nacionalidade: $contratacao_nacionalidade</h6>
-                            <h6 style='color: gray;'>Valor Pago: R$$contratacao_valor Milhões</h6>
+                            <h6 style='color: gray;'>Valor Pago: R$$contratacao_valor</h6>
                         </ul> 
                     </div>           
                 </div>

@@ -42,7 +42,7 @@ create table trofeus(
 );
 
 insert into trofeus (nome, quantidade, ultimo, img)
-values('Libertadores', 3, 2017, 'sla');
+values('Libertadores', 3, 2017, 'libertadores');
 
 drop table jogadores;
 create table jogadores(
@@ -66,6 +66,8 @@ create table contratacoes(
     valor integer,
     img text
 );
+insert into contratacoes (nome, posicao, time, idade, nacionalidade, valor, img)
+values('Enamorado', 'PD', 'Junior Barranquila', 27, 'Colombiano', '50000', 'enamorado');
 
 drop table partidas;
 create table partidas(

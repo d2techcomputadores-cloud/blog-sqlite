@@ -38,7 +38,7 @@ $rs_contratacoes = $conn->query($sql_dados_contratacoes);
         <thead>
             <th style="text-align: center;">Nome</th>
             <th style="text-align: center;">Posição</th>
-            <th style="text-align: center;">Idade</th>
+            <th style="text-align: center;">Ex clube</th>
             <th style="text-align: center;">Nacionalidade</th>
             <th style="text-align: center;">Comando</th>
         </thead>
@@ -61,9 +61,7 @@ $rs_contratacoes = $conn->query($sql_dados_contratacoes);
                     <td style='text-align: center;'>$nome</td>
                     <td style='text-align: center;'>$posicao</td>
                     <td style='text-align: center;'>$time</td>
-                    <td style='text-align: center;'>$idade</td>
                     <td style='text-align: center;'>$nacionalidade</td>
-                    <td style='text-align: center;'>$valor</td>
                     <td style='text-align: center;'>
                         <a style='color: black; background-color: red; border-radius: 8px; padding: 8px; font-family: Arial, Helvetica, sans-serif;'  
                         href='ctrl-apagar-contratacao.php?id=$id'>Deletar</a>
