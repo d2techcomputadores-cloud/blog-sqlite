@@ -55,7 +55,10 @@
         </nav>
     </div>
     <hr>
-    <img style="width: 100%; padding: 10px 0;" src="gif/gif-2000x380.gif">
+    <?php
+    require("hero.html");
+    ?>
+    <hr>
 
     <main>
 
@@ -81,12 +84,20 @@
         <?php
         require("require/card-socio.html");
         ?>
+
+
+        <div class='card mb-4 rounded-3 shadow-sm' style="width: 100%;">
+            <?php
+            require("carrosel.html");
+            ?>
+        </div>
         
-
-
         <?php
         require("require/footer.html");
         ?>
+
+        
+        
         
     </main>
 </body>
