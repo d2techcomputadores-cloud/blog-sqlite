@@ -22,7 +22,9 @@
                 <a class="blog-header-logo text-body-emphasis text-decoration-none"
                     href="#">BlogDoGrêmio</a> 
             </div>
-            <div class="col-4 d-flex justify-content-end align-items-center"> 
+            
+            <div class="col-4 d-flex justify-content-end align-items-center">
+                <!-- 
                 <a class="link-secondary" href="#" aria-label="Search"> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
                     stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3"
@@ -35,10 +37,16 @@
                 <div>
                     <a class="btn btn-sm btn-outline-secondary" href="#">Pesquisar</a>
                 </div>
+                -->
 
                 <div style="padding: 10px;">
-                <a class="btn btn-sm btn-outline-secondary" href="login.html">Logar</a>
+                <a style="font-family: arial; padding-left: 30px; padding-right: 30px; padding-top: 8px; padding-bottom: 8px;" 
+                class="btn btn-sm btn-outline-primary" href="/require/login.html">
+                    <img style="width: 20px;" src="img/flork3.jpg">
+                    Entrar
+                </a>
                 </div>
+                
                 
 
             </div>
@@ -56,7 +64,7 @@
     </div>
     <hr>
     <?php
-    require("hero.html");
+    require("require/hero.html");
     ?>
     <hr>
 
